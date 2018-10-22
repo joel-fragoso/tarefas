@@ -1,0 +1,14 @@
+{
+    "name": "joel-fragoso/tarefas",
+    "description": "Aplicativo para gerenciamento de tarefas",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joel Fragoso",
+            "email": "joel.fragoso@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
