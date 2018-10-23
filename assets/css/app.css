@@ -1,0 +1,261 @@
+/********** RESET **********/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #424242;
+	background-color: #F5F5F5;
+}
+
+fieldset {
+	padding: .5rem;
+	padding-bottom: 1rem;
+	border: 1px solid #424242;
+}
+
+label {
+	display: inline-block;
+	text-align: right;
+}
+
+input[type="text"],
+input[type="password"] {
+	font-size: 1rem;
+	padding: .5rem 1rem;
+	background-color: #E0E0E0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	border: none;
+	border-radius: 4px;
+}
+
+label,
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+}
+
+/********** BUTTON **********/
+.btn {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	border: none;
+	padding: .5rem 1rem;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: .75rem;
+}
+
+.btn,
+.btn-default {
+	color: #424242;
+}
+
+.btn-default {
+	background-color: #E0E0E0;
+}
+
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-warning {
+	color: #FFFFFF;
+}
+
+.btn-primary {
+	background-color: #2196F3;
+}
+
+.btn-success {
+	background-color: #4CAF50;
+}
+
+.btn-danger {
+	background-color: #f44336;
+}
+
+.btn-warning {
+	background-color: #FFC107;
+}
+
+/********** TABLE **********/
+.table {
+	width: 100%;
+	border: none;
+	background-color: #FFFFFF;
+}
+
+.table tr th {
+	font-size: .9rem;
+	font-weight: bold;
+	color: #424242;
+}
+
+.table tr th,
+.table tr td {
+	padding: .5rem;
+}
+
+.table-stripped tr:nth-child(even) {
+	background-color: #E0E0E0;
+}
+
+/********** CONTAINER **********/
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/********** ROW **********/
+.row {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.row:not(:last-child) {
+	margin-bottom: .5rem;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/********** COLUMNS **********/
+div[class^="col-"] {
+	margin: 0 .5rem;
+}
+
+.col-12 {
+	width: calc(100% - 1rem);
+}
+
+.col-11 {
+	width: calc(91.6666% - 1rem);
+}
+
+.col-10 {
+	width: calc(83.3333% - 1rem);
+}
+
+.col-9 {
+	width: calc(75% - 1rem);
+}
+
+.col-8 {
+	width: calc(66.6666% - 1rem);
+}
+
+.col-7 {
+	width: calc(58.3333% - 1rem);
+}
+
+.col-6 {
+	width: calc(50% - 1rem);
+}
+
+.col-5 {
+	width: calc(41.6666% - 1rem);
+}
+
+.col-4 {
+	width: calc(33.3333% - 1rem);
+}
+
+.col-3 {
+	width: calc(25% - 1rem);
+}
+
+.col-2 {
+	width: calc(16.6666% - 1rem);
+}
+
+.col-1 {
+	width: calc(8.3333% - 1rem);
+}
+
+/********** OFFSET **********/
+.offset-12 {
+	margin-left: calc(100% + .5rem);
+}
+
+.offset-11 {
+	margin-left: calc(91.6666% + .5rem);
+}
+
+.offset-10 {
+	margin-left: calc(83.3333% + .5rem);
+}
+
+.offset-9 {
+	margin-left: calc(75% + .5rem);
+}
+
+.offset-8 {
+	margin-left: calc(66.6666% + .5rem);
+}
+
+.offset-7 {
+	margin-left: calc(58.3333% + .5rem);
+}
+
+.offset-6 {
+	margin-left: calc(50% + .5rem);
+}
+
+.offset-5 {
+	margin-left: calc(41.6666% + .5rem);
+}
+
+.offset-4 {
+	margin-left: calc(33.3333% + .5rem);
+}
+
+.offset-3 {
+	margin-left: calc(25% + .5rem);
+}
+
+.offset-2 {
+	margin-left: calc(16.6666% + .5rem);
+}
+
+.offset-1 {
+	margin-left: calc(8.3333% + .5rem);
+}

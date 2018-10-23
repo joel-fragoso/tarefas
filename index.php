@@ -6,39 +6,62 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE-Edge, Chrome=1">
 		<title>Tarefas</title>
+		<link rel="stylesheet" href="assets/css/app.css">
 	</head>
 	<body>
-		<h1>Gerenciador de tarefas</h1>
-		<form>
-			<fieldset>
-				<legend>Nova tarefa</legend>
-				<label>
-					Tarefas:
-					<input type="text" name="nome">
-				</label>
-				<input type="submit" value="Cadastrar">
-			</fieldset>
-		</form>
-		<?php
-			if (isset($_GET['nome'])) {
-				$_SESSION['lista_tarefas'][] = $_GET['nome'];
-			}
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1>Gerenciador de tarefas</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<form>
+						<fieldset>
+							<legend>Nova tarefa</legend>
+							<div class="row">
+								<div class="col-2">
+									<label>Tarefas:</label>
+								</div>
+								<div class="col-10">
+									<input type="text" name="nome">
+								</div>
+							</div>
+							<div class="row">
+								<div class="offset-2 col-10">
+									<input class="btn btn-primary" type="submit" value="Cadastrar">
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<?php
+						if (isset($_GET['nome'])) {
+							$_SESSION['lista_tarefas'][] = $_GET['nome'];
+						}
 
-			$lista_tarefas = array();
+						$lista_tarefas = array();
 
-			if (isset($_SESSION['lista_tarefas'])) {
-				$lista_tarefas = $_SESSION['lista_tarefas'];
-			}
-		?>
-		<table>
-			<tr>
-				<th>Tarefas</th>
-			</tr>
-			<?php foreach ($lista_tarefas as $tarefa) : ?>
-				<tr>
-					<td><?php echo $tarefa; ?></td>
-				</tr>
-			<?php endforeach; ?>
-		</table>
+						if (isset($_SESSION['lista_tarefas'])) {
+							$lista_tarefas = $_SESSION['lista_tarefas'];
+						}
+					?>
+					<table class="table table-stripped">
+						<tr>
+							<th>Tarefas</th>
+						</tr>
+						<?php foreach ($lista_tarefas as $tarefa) : ?>
+							<tr>
+								<td><?php echo $tarefa; ?></td>
+							</tr>
+						<?php endforeach; ?>
+					</table>
+				</div>
+			</div>
+		</div><!-- /.container -->
 	</body>
 </html>
