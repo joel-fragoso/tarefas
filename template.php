@@ -48,9 +48,9 @@
 									<label>Prioridade:</label>
 								</div>
 								<div class="col-10">
-									<input type="radio" name="prioridade" value="baixa" checked="on">&nbsp;Baixa
-									<input type="radio" name="prioridade" value="media">&nbsp;Média
-									<input type="radio" name="prioridade" value="alta">&nbsp;Alta
+									<input type="radio" name="prioridade" value="1" checked="on">&nbsp;Baixa
+									<input type="radio" name="prioridade" value="2">&nbsp;Média
+									<input type="radio" name="prioridade" value="3">&nbsp;Alta
 								</div>
 							</div>
 							<div class="row">
@@ -58,7 +58,7 @@
 									<label>Tarefa concluída</label>
 								</div>
 								<div class="col-10">
-									<input type="checkbox" name="concluida" value="sim">
+									<input type="checkbox" name="concluida" value="1">
 								</div>
 							</div>
 							<div class="row">
@@ -84,9 +84,9 @@
 							<tr>
 								<td><?php echo $tarefa['nome']; ?></td>
 								<td><?php echo $tarefa['descricao']; ?></td>
-								<td><?php echo $tarefa['prazo']; ?></td>
-								<td><?php echo $tarefa['prioridade']; ?></td>
-								<td><?php echo $tarefa['concluida']; ?></td>
+								<td><?php echo traduz_data_para_exibir($tarefa['prazo']); ?></td>
+								<td><?php echo traduz_prioridade($tarefa['prioridade']); ?></td>
+								<td><?php echo traduz_concluida($tarefa['concluida']); ?></td>
 							</tr>
 						<?php endforeach; ?>
 					</table>
