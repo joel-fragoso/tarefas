@@ -71,6 +71,8 @@ textarea {
 	display: flex;
 	-ms-align-items: center;
 	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
@@ -82,6 +84,11 @@ textarea {
 	cursor: pointer;
 	font-weight: bold;
 	font-size: .75rem;
+	text-decoration: none;
+}
+
+.btn-small {
+	padding: .2rem;
 }
 
 .btn,

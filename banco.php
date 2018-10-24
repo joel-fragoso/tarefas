@@ -25,9 +25,21 @@ function buscar_tarefas($conn) {
 	return $tarefas;
 }
 
+function buscar_tarefa($conn, $id) {
+	$sql = "SELECT * FROM tarefas WHERE id = {$id}";
+	$res = mysqli_query($conn, $sql);
+	return mysqli_fetch_assoc($res);
+}
+
 function gravar_tarefa($conn, $tarefa) {
 	$sql = "INSERT INTO tarefas 
-					(nome, descricao, prazo, prioridade, concluida) 
+					(
+						nome, 
+						descricao, 
+						prazo, 
+						prioridade, 
+						concluida
+					) 
 					VALUES 
 					(
 						'{$tarefa['nome']}', 
@@ -36,6 +48,18 @@ function gravar_tarefa($conn, $tarefa) {
 						'{$tarefa['prioridade']}', 
 						'{$tarefa['concluida']}'
 					)";
+
+	mysqli_query($conn, $sql);
+}
+
+function editar_tarefa($conn, $tarefa) {
+	$sql = "UPDATE tarefas SET
+				 		nome = '{$tarefa['nome']}',
+				 		descricao = '{$tarefa['descricao']}',
+				 		prazo = '{$tarefa['prazo']}',
+				 		prioridade = '{$tarefa['prioridade']}',
+				 		concluida = '{$tarefa['concluida']}'
+				 	WHERE id = {$tarefa['id']}";
 
 	mysqli_query($conn, $sql);
 }
