@@ -18,6 +18,7 @@
 					<td><?php echo traduz_concluida($tarefa['concluida']); ?></td>
 					<td>
 						<a class="btn btn-small btn-warning" href="editar.php?id=<?php echo $tarefa['id']; ?>">Editar</a>
+						<a class="btn btn-small btn-danger" href="remover.php?id=<?php echo $tarefa['id']; ?>">Remover</a>
 					</td>
 				</tr>
 			<?php endforeach; ?>

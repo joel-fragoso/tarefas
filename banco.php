@@ -63,3 +63,9 @@ function editar_tarefa($conn, $tarefa) {
 
 	mysqli_query($conn, $sql);
 }
+
+function remover_tarefa($conn, $id) {
+	$sql = "DELETE FROM tarefas WHERE id = {$id}";
+
+	mysqli_query($conn, $sql);
+}

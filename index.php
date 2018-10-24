@@ -35,6 +35,8 @@ if (isset($_GET['nome']) && $_GET['nome'] != '') {
 	}
 
 	gravar_tarefa($conn, $tarefa);
+	header('Location: index.php');
+	die;
 }
 
 $lista_tarefas = array();
