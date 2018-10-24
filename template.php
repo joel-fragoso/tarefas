@@ -20,49 +20,49 @@
 						<fieldset>
 							<legend>Nova tarefa</legend>
 							<div class="row">
-								<div class="col-2">
+								<div class="col-3">
 									<label>Tarefas:</label>
 								</div>
-								<div class="col-10">
+								<div class="col-9">
 									<input type="text" name="nome">
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-2">
+								<div class="col-3">
 									<label>Descrição (Opcional):</label>
 								</div>
-								<div class="col-10">
+								<div class="col-9">
 									<textarea name="descricao"></textarea>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-2">
+								<div class="col-3">
 									<label>Prazo (Opcional):</label>
 								</div>
-								<div class="col-10">
+								<div class="col-9">
 									<input type="text" name="prazo">
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-2">
+								<div class="col-3">
 									<label>Prioridade:</label>
 								</div>
-								<div class="col-10">
+								<div class="col-9">
 									<input type="radio" name="prioridade" value="1" checked="on">&nbsp;Baixa
 									<input type="radio" name="prioridade" value="2">&nbsp;Média
 									<input type="radio" name="prioridade" value="3">&nbsp;Alta
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-2">
-									<label>Tarefa concluída</label>
+								<div class="col-3">
+									<label>Tarefa concluída:</label>
 								</div>
-								<div class="col-10">
+								<div class="col-9">
 									<input type="checkbox" name="concluida" value="1">
 								</div>
 							</div>
 							<div class="row">
-								<div class="offset-2 col-10">
+								<div class="offset-3 col-9">
 									<input class="btn btn-primary" type="submit" value="Cadastrar">
 								</div>
 							</div>
