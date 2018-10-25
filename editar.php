@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+date_default_timezone_set('America/Sao_Paulo');
+
 include "banco.php";
 include "ajudantes.php";
 
@@ -53,7 +57,7 @@ if (tem_post()) {
 	}
 }
 
-$tarefa = buscar_tarefa($conn, $_POST['id']);
+$tarefa = buscar_tarefa($conn, $_GET['id']);
 
 $tarefa['nome'] = (isset($_POST['nome'])) ? $_POST['nome'] : $tarefa['nome'];
 $tarefa['descricao'] = (isset($_POST['descricao'])) ? $_POST['descricao'] : $tarefa['descricao'];

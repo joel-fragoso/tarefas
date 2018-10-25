@@ -84,3 +84,16 @@ function validar_data($data) {
 
 	return $result;
 }
+
+function tratar_anexo($anexo) {
+	$pattern = '/^.+(\.pdf|\.zip)$/';
+	$result  = preg_match($pattern, $anexo['name']);
+
+	if (!$result) {
+		return false;
+	}
+
+	move_uploaded_file($anexo['tmp_name'], "anexos/{$anexo['name']}");
+
+	return true;
+}
