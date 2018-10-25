@@ -1,9 +1,16 @@
 <div class="row">
 	<div class="col-12">
-		<form>
+		<form method="post">
 			<fieldset>
 				<legend>Nova tarefa</legend>
 				<input type="hidden" name="id" value="<?php echo $tarefa['id']; ?>">
+				<?php if ($tem_erros && isset($erros_validacao['nome'])) : ?>
+					<div class="row">
+						<div class="offset-3 col-9">
+							<span class="error"><?php echo $erros_validacao['nome']; ?></span>
+						</div>
+					</div>
+				<?php endif; ?>
 				<div class="row">
 					<div class="col-3">
 						<label>Tarefas:</label>
@@ -20,6 +27,13 @@
 						<textarea name="descricao"><?php echo $tarefa['descricao']; ?></textarea>
 					</div>
 				</div>
+				<?php if ($tem_erros && isset($erros_validacao['prazo'])) : ?>
+					<div class="row">
+						<div class="offset-3 col-9">
+							<span class="error"><?php echo $erros_validacao['prazo']; ?></span>
+						</div>
+					</div>
+				<?php endif; ?>
 				<div class="row">
 					<div class="col-3">
 						<label>Prazo (Opcional):</label>
